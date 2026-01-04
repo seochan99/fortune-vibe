@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import UserInput from '../../../features/User_Input';
 import FortuneResult from '../../../features/Fortune_Result';
-import { Loading, Footer } from '../../../shared/UI';
+import { Loading } from '../../../shared/UI';
+import Footer from '../../../shared/UI/Footer';
 import MysticBackground from '../../../shared/UI/MysticBackground/MysticBackground';
 import { useFortuneAI } from '../../../shared/Lib/Hooks/useFortuneAI';
 import './HomePage.css';
