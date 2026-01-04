@@ -1,0 +1,26 @@
+.user-input {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.user-input-label {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Cinzel', serif;
+  color: var(--text-gold);
+  text-shadow: 
+    0 0 10px var(--shadow-gold),
+    0 2px 8px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.user-input-button {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+

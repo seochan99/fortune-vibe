@@ -1,0 +1,38 @@
+.textarea {
+  width: 100%;
+  padding: 18px;
+  font-size: 17px;
+  font-family: 'Cormorant Garamond', serif;
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  resize: vertical;
+  transition: all 0.4s ease;
+  background: linear-gradient(135deg, rgba(26, 13, 46, 0.8) 0%, rgba(45, 27, 78, 0.6) 100%);
+  color: #e8e0f0;
+  box-shadow: 
+    inset 0 2px 8px rgba(0, 0, 0, 0.3),
+    0 0 10px rgba(212, 175, 55, 0.1);
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 
+    0 0 0 3px var(--shadow-gold),
+    0 0 20px rgba(212, 175, 55, 0.3),
+    inset 0 2px 8px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, rgba(26, 13, 46, 0.9) 0%, rgba(45, 27, 78, 0.7) 100%);
+}
+
+.textarea:disabled {
+  background: rgba(26, 13, 46, 0.5);
+  cursor: not-allowed;
+  opacity: 0.6;
+  border-color: rgba(212, 175, 55, 0.2);
+}
+
+.textarea::placeholder {
+  color: rgba(232, 224, 240, 0.5);
+  font-style: italic;
+}
+

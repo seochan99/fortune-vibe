@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-purple: #1a0d2e;
+  --deep-purple: #2d1b4e;
+  --mystic-purple: #4a2c6d;
+  --gold: #d4af37;
+  --gold-light: #f4d03f;
+  --gold-dark: #b8941f;
+  --text-gold: #ffd700;
+  --shadow-gold: rgba(212, 175, 55, 0.3);
+  --shadow-purple: rgba(74, 44, 109, 0.5);
+  
+  font-family: 'Cormorant Garamond', 'Cinzel', serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--dark-purple);
+  color: #e8e0f0;
+}
+
+#root {
+  min-height: 100vh;
+}

@@ -1,0 +1,293 @@
+.fortune-result {
+  width: 100%;
+  max-width: 100%;
+  margin: 40px auto 0;
+  padding: 32px;
+  background: linear-gradient(135deg, rgba(45, 27, 78, 0.6) 0%, rgba(26, 13, 46, 0.8) 100%);
+  border-radius: 16px;
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 40px var(--shadow-purple),
+    inset 0 0 60px rgba(212, 175, 55, 0.05);
+  animation: fadeIn 0.8s ease-in, glow 3s ease-in-out infinite;
+  position: relative;
+  overflow: visible;
+  box-sizing: border-box;
+  min-width: 0;
+  display: block;
+}
+
+.fortune-result::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, var(--gold), var(--mystic-purple), var(--gold));
+  border-radius: 16px;
+  z-index: -1;
+  opacity: 0.2;
+  filter: blur(6px);
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.4),
+      0 0 40px var(--shadow-purple),
+      inset 0 0 60px rgba(212, 175, 55, 0.05);
+  }
+  50% {
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.4),
+      0 0 60px var(--shadow-gold),
+      inset 0 0 60px rgba(212, 175, 55, 0.1);
+  }
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.fortune-result-header {
+  text-align: center;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.fortune-result-header::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  box-shadow: 0 0 8px var(--shadow-gold);
+}
+
+.fortune-result-title {
+  font-family: 'Cinzel', serif;
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffd700 0%, #d4af37 50%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  text-shadow: 0 0 20px var(--shadow-gold);
+  letter-spacing: 2px;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.fortune-result-content {
+  background: linear-gradient(135deg, rgba(26, 13, 46, 0.9) 0%, rgba(45, 27, 78, 0.7) 100%);
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 
+    inset 0 2px 8px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  overflow: visible;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+
+.fortune-result-text {
+  font-size: 19px;
+  line-height: 2;
+  color: #e8e0f0;
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  font-family: 'Cormorant Garamond', serif;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
+  overflow: visible;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  display: block;
+  text-overflow: clip;
+  hyphens: auto;
+}
+
+/* 마크다운 스타일링 */
+.fortune-result-text h1,
+.fortune-result-text h2,
+.fortune-result-text h3,
+.fortune-result-text h4,
+.fortune-result-text h5,
+.fortune-result-text h6 {
+  font-family: 'Cinzel', serif;
+  color: var(--text-gold);
+  margin: 24px 0 16px 0;
+  text-shadow: 
+    0 0 10px var(--shadow-gold),
+    0 2px 8px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+}
+
+.fortune-result-text h2 {
+  font-size: 24px;
+  font-weight: 700;
+  border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+  padding-bottom: 12px;
+  margin-top: 32px;
+}
+
+.fortune-result-text h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.fortune-result-text p {
+  margin: 16px 0;
+  line-height: 2;
+  color: #e8e0f0;
+}
+
+.fortune-result-text ul,
+.fortune-result-text ol {
+  margin: 20px 0;
+  padding-left: 32px;
+  list-style-position: outside;
+}
+
+.fortune-result-text ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.fortune-result-text ul li {
+  margin: 16px 0;
+  padding-left: 28px;
+  position: relative;
+  line-height: 2;
+  color: #e8e0f0;
+}
+
+.fortune-result-text ul li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 18px;
+  text-shadow: 0 0 8px var(--shadow-gold);
+  margin-right: 12px;
+}
+
+.fortune-result-text ol li {
+  margin: 16px 0;
+  line-height: 2;
+  color: #e8e0f0;
+  padding-left: 8px;
+}
+
+.fortune-result-text strong,
+.fortune-result-text b {
+  color: var(--text-gold);
+  font-weight: 700;
+  text-shadow: 0 0 8px var(--shadow-gold);
+}
+
+.fortune-result-text em,
+.fortune-result-text i {
+  font-style: italic;
+  color: #d4c4e8;
+}
+
+.fortune-result-text code {
+  background: rgba(26, 13, 46, 0.6);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  color: var(--gold-light);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.fortune-result-text blockquote {
+  margin: 24px 0;
+  padding: 16px 24px;
+  border-left: 4px solid var(--gold);
+  background: rgba(212, 175, 55, 0.05);
+  border-radius: 8px;
+  font-style: italic;
+  color: #e8e0f0;
+}
+
+.fortune-result-text hr {
+  border: none;
+  border-top: 2px solid rgba(212, 175, 55, 0.3);
+  margin: 32px 0;
+  box-shadow: 0 0 8px var(--shadow-gold);
+}
+
+.fortune-result-text a {
+  color: var(--gold-light);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.5);
+  transition: all 0.3s ease;
+}
+
+.fortune-result-text a:hover {
+  color: var(--text-gold);
+  border-bottom-color: var(--gold);
+  text-shadow: 0 0 8px var(--shadow-gold);
+}
+
+/* 타이핑 커서 효과 */
+.typing-cursor {
+  display: inline-block;
+  color: var(--gold);
+  font-weight: bold;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+  text-shadow: 0 0 8px var(--shadow-gold);
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+.fortune-result-actions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 0.5s ease-in 0.5s both;
+}
+
